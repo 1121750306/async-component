@@ -5,7 +5,8 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "header": "vue-cli-service build --target lib --name output-header src/output-component/header.vue"
   },
   "dependencies": {
     "core-js": "^2.6.5",

@@ -1,2 +1,8 @@
 # async-component
 远程异步组件调用的demo
+
+进入output目录，使用命令npm run header，将测试的header组件输出到目标目录，之后放置到服务器位置
+
+进入main目录，启动项目，修改router中引用的异步组件路径到服务器的具体文件引入即可
+
+loadAsyncVueComponent中的内容是压缩后js的使用方法
