@@ -2,6 +2,9 @@
 export default function (js) {
   return new Promise((resolve) => {
     // 刷新页面时重新下载最新的JS文件
+
+    let libName = js.replace(/^(.+?\/)([^\/?]+).js.*$/, '$2')
+    libName = libName.replace(/\.umd/, '').replace(/\.min/, '')
     $.getScript(`${js}?rand=${Math.random()}`, function (a) {
       console.log(a)
       // resolve(a)

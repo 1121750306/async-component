@@ -23,7 +23,7 @@ export default new Router({
       component: () => {
         return new Promise(resolve => {
           // 引入服务器的js
-          loadAsyncVueComponent('http://localhost:4000/output-header.umd.min.js')
+          loadAsyncVueComponent('http://localhost:7070/output-header.umd.min.js')
             .then(component => {
               resolve(component)
             })

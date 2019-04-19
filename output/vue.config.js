@@ -1,10 +1,19 @@
 const path = require("path");
 
 module.exports = {
-  outputDir: path.resolve(__dirname, './dist'),
+  outputDir: path.resolve(__dirname, '../server/app/dist'),
   runtimeCompiler: true,
   css: {
     extract: false
+  },
+  devServer: {
+    disableHostCheck: true,
+    proxy: {
+      '/test': {
+        target: 'http://127.0.0.1:7070',
+        changeOrigin: true,
+      }
+    },
   },
 
   // chainWebpack: config => {
